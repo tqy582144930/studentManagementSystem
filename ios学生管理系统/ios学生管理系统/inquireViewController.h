@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Student.h"
 
 @interface inquireViewController : UIViewController
 {
@@ -15,5 +16,9 @@
     UIButton *fixButton;
     UIButton *findButton;
 }
-
+@property (nonatomic, strong) NSMutableArray *studentMutableArray;
+@property (nonatomic, strong) Student *stu;
+@property (nonatomic, strong) Student *stu1;
+@property (nonatomic, strong) Student *stu2;
+@property (nonatomic, strong) Student *stu3;
 @end

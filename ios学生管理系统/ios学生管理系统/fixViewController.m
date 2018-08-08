@@ -8,6 +8,7 @@
 
 #import "fixViewController.h"
 #import "addTableViewCell.h"
+#import "Student.h"
 
 @interface fixViewController ()
 
@@ -155,7 +156,7 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
+    return [_fixStudentMutableArray count];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -167,6 +168,12 @@
     if (cell == nil) {
         cell = [_tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     }
+    Student *stu = _fixStudentMutableArray[indexPath.section];
+    cell.addNameLable.text = stu.nameString;
+    cell.addClassLable.text = stu.classString;
+    cell.addNumLable.text = stu.numString;
+    cell.addAgeLable.text = stu.ageString;
+    cell.addScoreLable.text = stu.scoreString;
     return cell;
 }
 

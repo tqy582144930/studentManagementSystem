@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91313AE5211B2C6700D6A5BF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 91313AE3211B2C6700D6A5BF /* Student.m */; };
 		9131432021193E1E00EA718D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131431F21193E1E00EA718D /* AppDelegate.m */; };
 		9131432321193E1E00EA718D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131432221193E1E00EA718D /* ViewController.m */; };
 		9131432621193E1E00EA718D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9131432421193E1E00EA718D /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91313AE3211B2C6700D6A5BF /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		91313AE4211B2C6700D6A5BF /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		9131431B21193E1E00EA718D /* ios学生管理系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios学生管理系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9131431E21193E1E00EA718D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9131431F21193E1E00EA718D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				9131436F2119B63700EA718D /* fixViewController.m */,
 				913143712119B64100EA718D /* findViewController.h */,
 				913143722119B64100EA718D /* findViewController.m */,
+				91313AE4211B2C6700D6A5BF /* Student.h */,
+				91313AE3211B2C6700D6A5BF /* Student.m */,
 			);
 			path = "ios学生管理系统";
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				913143732119B64100EA718D /* findViewController.m in Sources */,
 				9131432021193E1E00EA718D /* AppDelegate.m in Sources */,
 				9131435521193E4000EA718D /* LoginViewController.m in Sources */,
+				91313AE5211B2C6700D6A5BF /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,5 +17,5 @@ UITableViewDataSource>
 @property (nonatomic, strong) UITextField *numTextField;
 @property (nonatomic, strong) UITextField *ageTextField;
 @property (nonatomic, strong) UITextField *scoreTextField;
-
+@property (nonatomic, strong) NSMutableArray *addStudentMutableArray;
 @end

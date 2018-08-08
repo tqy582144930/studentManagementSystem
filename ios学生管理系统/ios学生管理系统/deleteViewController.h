@@ -13,4 +13,5 @@
 UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITextField *deleteTextField;
+@property (nonatomic, strong) NSMutableArray *deleteStudentMutableArray;
 @end

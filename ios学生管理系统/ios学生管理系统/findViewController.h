@@ -18,5 +18,6 @@ UITableViewDataSource>
 @property (nonatomic, strong) UILabel *findAgeLabel;
 @property (nonatomic, strong) UILabel *findScoreLabel;
 @property (nonatomic, strong) UITextField *findTextField;
+@property (nonatomic, strong) NSMutableArray *findStudentMutableArray;
 
 @end

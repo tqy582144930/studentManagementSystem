@@ -8,6 +8,7 @@
 
 #import "addViewController.h"
 #import "addTableViewCell.h"
+#import "Student.h"
 
 @interface addViewController ()
 
@@ -141,7 +142,7 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
+    return [_addStudentMutableArray count];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -150,19 +151,15 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     addTableViewCell *cell = nil;
-    NSArray *array = [NSArray arrayWithObjects:@"10000",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1", nil];
-    NSArray *array1 = [NSArray arrayWithObjects:@"10000",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1", nil];
-    NSArray *array2 = [NSArray arrayWithObjects:@"1000",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1", nil];
-    NSArray *array3 = [NSArray arrayWithObjects:@"100",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1", nil];
-    NSArray *array4 = [NSArray arrayWithObjects:@"100",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1",@"1", nil];
     if (cell == nil) {
         cell = [_tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     }
-    cell.addNameLable.text = [array objectAtIndex:indexPath.section];
-    cell.addClassLable.text = [array1 objectAtIndex:indexPath.section];
-    cell.addNumLable.text = [array2 objectAtIndex:indexPath.section];
-    cell.addAgeLable.text = [array3 objectAtIndex:indexPath.section];
-    cell.addScoreLable.text = [array4 objectAtIndex:indexPath.section];
+    Student *stu = _addStudentMutableArray[indexPath.section];
+    cell.addNameLable.text = stu.nameString;
+    cell.addClassLable.text = stu.classString;
+    cell.addNumLable.text = stu.numString;
+    cell.addAgeLable.text = stu.ageString;
+    cell.addScoreLable.text = stu.scoreString;
     return cell;
 }
 

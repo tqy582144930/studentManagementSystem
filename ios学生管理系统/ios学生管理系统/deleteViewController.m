@@ -8,6 +8,7 @@
 
 #import "deleteViewController.h"
 #import "addTableViewCell.h"
+#import "Student.h"
 
 @interface deleteViewController ()
 
@@ -85,7 +86,7 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
+    return [_deleteStudentMutableArray count];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -97,6 +98,12 @@
     if (cell == nil) {
         cell = [_tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
     }
+    Student *stu = _deleteStudentMutableArray[indexPath.section];
+    cell.addNameLable.text = stu.nameString;
+    cell.addClassLable.text = stu.classString;
+    cell.addNumLable.text = stu.numString;
+    cell.addAgeLable.text = stu.ageString;
+    cell.addScoreLable.text = stu.scoreString;
     return cell;
 }
 

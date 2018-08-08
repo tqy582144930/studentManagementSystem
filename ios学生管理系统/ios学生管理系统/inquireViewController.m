@@ -11,6 +11,7 @@
 #import "deleteViewController.h"
 #import "fixViewController.h"
 #import "findViewController.h"
+#import "Student.h"
 
 @interface inquireViewController ()
 
@@ -72,25 +73,39 @@
     [self.view addSubview:deleteButton];
     [self.view addSubview:fixButton];
     [self.view addSubview:findButton];
+    
+    _studentMutableArray = [[NSMutableArray alloc] init];
+    _stu = [[Student alloc] initWithName:@"小黑" andClass:@"1701" andAge:@"23" andNum:@"43" andScore:@"54"];
+    _stu1 = [[Student alloc] initWithName:@"小白" andClass:@"1702" andAge:@"34" andNum:@"23" andScore:@"154"];
+    _stu2 = [[Student alloc] initWithName:@"小王" andClass:@"1703" andAge:@"25" andNum:@"65" andScore:@"23"];
+    _stu3 = [[Student alloc] initWithName:@"小李" andClass:@"1704" andAge:@"21" andNum:@"76" andScore:@"67"];
+    [_studentMutableArray addObject:_stu];
+    [_studentMutableArray addObject:_stu1];
+    [_studentMutableArray addObject:_stu2];
+    [_studentMutableArray addObject:_stu3];
 }
 
 - (void)pressAdd {
     addViewController *nextViewController = [[addViewController alloc] init];
+    nextViewController.addStudentMutableArray = [NSMutableArray arrayWithArray:_studentMutableArray];
     [self.navigationController pushViewController:nextViewController animated:YES];
 }
 
 - (void)pressDelete {
     deleteViewController *nextViewController = [[deleteViewController alloc] init];
+    nextViewController.deleteStudentMutableArray = [NSMutableArray arrayWithArray:_studentMutableArray];
     [self.navigationController pushViewController:nextViewController animated:YES];
 }
 
 - (void)pressFix {
     fixViewController *nextViewController = [[fixViewController alloc] init];
+    nextViewController.fixStudentMutableArray = [NSMutableArray arrayWithArray:_studentMutableArray];
     [self.navigationController pushViewController:nextViewController animated:YES];
 }
 
 - (void)pressFind {
     findViewController *nextViewController = [[findViewController alloc] init];
+    nextViewController.findStudentMutableArray = [NSMutableArray arrayWithArray:_studentMutableArray];
     [self.navigationController pushViewController:nextViewController animated:YES];
 }
 
