@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "registerViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <RegisterViewControllerDelegate>
 {
     UIButton *loginButton;
     UIButton *registerButton;
+    UIImage *_userImage;
+    UIImage *_passImage;
 }
 @property (nonatomic, strong) UITextField *userTextField;
 @property (nonatomic, strong) UITextField *passTextField;
+@property (nonatomic, strong) UILabel *nameLable;
+@property (nonatomic, strong) NSMutableArray *LoginMutableArray;
+@property (nonatomic, strong) NSMutableArray *array;
 
 @end

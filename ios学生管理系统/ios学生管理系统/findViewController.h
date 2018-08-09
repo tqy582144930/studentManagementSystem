@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Student.h"
+
 
 @interface findViewController : UIViewController
-<UITableViewDelegate,
-UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) UILabel *findNameLabel;
 @property (nonatomic, strong) UILabel *findClassLabel;
 @property (nonatomic, strong) UILabel *findNumLabel;
 @property (nonatomic, strong) UILabel *findAgeLabel;
 @property (nonatomic, strong) UILabel *findScoreLabel;
 @property (nonatomic, strong) UITextField *findTextField;
-@property (nonatomic, strong) NSMutableArray *findStudentMutableArray;
+@property (nonatomic, strong) NSMutableArray *sendStudentMutableArray;
+@property (nonatomic, strong) Student *findMutableArray;
 
 @end

@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "homePageViewController.h"
+
+@protocol addViewControllerDelegate <NSObject>
+- (void)sendArray:(NSMutableArray *) addMutableArray;
+@end
 
 @interface addViewController : UIViewController
 <UITableViewDelegate,
@@ -17,5 +22,7 @@ UITableViewDataSource>
 @property (nonatomic, strong) UITextField *numTextField;
 @property (nonatomic, strong) UITextField *ageTextField;
 @property (nonatomic, strong) UITextField *scoreTextField;
-@property (nonatomic, strong) NSMutableArray *addStudentMutableArray;
+@property (nonatomic, strong) NSMutableArray *sendStudentMutableArray;
+@property (nonatomic, strong) NSMutableArray *addMutableArray;
+@property (nonatomic, strong) id <addViewControllerDelegate> delegate;
 @end

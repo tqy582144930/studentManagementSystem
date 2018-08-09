@@ -17,13 +17,29 @@
 		9131433821193E2300EA718D /* ios______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131433721193E2300EA718D /* ios______Tests.m */; };
 		9131434321193E2300EA718D /* ios______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131434221193E2300EA718D /* ios______UITests.m */; };
 		9131435521193E4000EA718D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131435421193E4000EA718D /* LoginViewController.m */; };
-		9131435821193E7000EA718D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131435721193E7000EA718D /* RegisterViewController.m */; };
-		9131435B2119919400EA718D /* inquireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131435A2119919400EA718D /* inquireViewController.m */; };
 		9131435E2119960300EA718D /* addViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131435D2119960300EA718D /* addViewController.m */; };
 		913143612119995900EA718D /* addTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 913143602119995900EA718D /* addTableViewCell.m */; };
 		9131436D2119B62D00EA718D /* deleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131436C2119B62D00EA718D /* deleteViewController.m */; };
 		913143702119B63700EA718D /* fixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9131436F2119B63700EA718D /* fixViewController.m */; };
 		913143732119B64100EA718D /* findViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913143722119B64100EA718D /* findViewController.m */; };
+		91EB5B0B211BCF7C005DEEB1 /* homePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EB5B0A211BCF7C005DEEB1 /* homePageViewController.m */; };
+		91EB5B0E211BD05A005DEEB1 /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EB5B0D211BD05A005DEEB1 /* registerViewController.m */; };
+		91EBF658211C58BD00F85EB2 /* 修 改.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF654211C58BD00F85EB2 /* 修 改.png */; };
+		91EBF659211C58BD00F85EB2 /* 删除筛选项.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF655211C58BD00F85EB2 /* 删除筛选项.png */; };
+		91EBF65A211C58BD00F85EB2 /* 增加.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF656211C58BD00F85EB2 /* 增加.png */; };
+		91EBF65B211C58BD00F85EB2 /* 查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF657211C58BD00F85EB2 /* 查询.png */; };
+		91EBF65E211C59AD00F85EB2 /* pass_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF65C211C59AD00F85EB2 /* pass_img.png */; };
+		91EBF65F211C59AD00F85EB2 /* user_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF65D211C59AD00F85EB2 /* user_img.png */; };
+		91EBF661211C64B500F85EB2 /* 学生.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF660211C64B500F85EB2 /* 学生.png */; };
+		91EBF663211C661100F85EB2 /* 退出登陆.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF662211C661100F85EB2 /* 退出登陆.png */; };
+		91EBF665211C6D0400F85EB2 /* 登陆.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF664211C6D0400F85EB2 /* 登陆.jpg */; };
+		91EBF667211C6F4200F85EB2 /* 注册.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF666211C6F4200F85EB2 /* 注册.jpg */; };
+		91EBF669211C70FC00F85EB2 /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF668211C70FC00F85EB2 /* 注册.png */; };
+		91EBF66B211C71FB00F85EB2 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF66A211C71FB00F85EB2 /* 首页.png */; };
+		91EBF66F211C757D00F85EB2 /* 查询背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF66E211C757D00F85EB2 /* 查询背景.png */; };
+		91EBF671211C78B500F85EB2 /* 添加背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF670211C78B500F85EB2 /* 添加背景.png */; };
+		91EBF673211C7BEA00F85EB2 /* 删除背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF672211C7BEA00F85EB2 /* 删除背景.png */; };
+		91EBF675211C7C5600F85EB2 /* 修改背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 91EBF674211C7C5600F85EB2 /* 修改背景.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +80,6 @@
 		9131434421193E2300EA718D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9131435321193E4000EA718D /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9131435421193E4000EA718D /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		9131435621193E7000EA718D /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		9131435721193E7000EA718D /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		913143592119919400EA718D /* inquireViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = inquireViewController.h; sourceTree = "<group>"; };
-		9131435A2119919400EA718D /* inquireViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = inquireViewController.m; sourceTree = "<group>"; };
 		9131435C2119960300EA718D /* addViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addViewController.h; sourceTree = "<group>"; };
 		9131435D2119960300EA718D /* addViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addViewController.m; sourceTree = "<group>"; };
 		9131435F2119995900EA718D /* addTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addTableViewCell.h; sourceTree = "<group>"; };
@@ -78,6 +90,26 @@
 		9131436F2119B63700EA718D /* fixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fixViewController.m; sourceTree = "<group>"; };
 		913143712119B64100EA718D /* findViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findViewController.h; sourceTree = "<group>"; };
 		913143722119B64100EA718D /* findViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = findViewController.m; sourceTree = "<group>"; };
+		91EB5B09211BCF7C005DEEB1 /* homePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homePageViewController.h; sourceTree = "<group>"; };
+		91EB5B0A211BCF7C005DEEB1 /* homePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homePageViewController.m; sourceTree = "<group>"; };
+		91EB5B0C211BD05A005DEEB1 /* registerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
+		91EB5B0D211BD05A005DEEB1 /* registerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerViewController.m; sourceTree = "<group>"; };
+		91EBF654211C58BD00F85EB2 /* 修 改.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "修 改.png"; sourceTree = "<group>"; };
+		91EBF655211C58BD00F85EB2 /* 删除筛选项.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除筛选项.png"; sourceTree = "<group>"; };
+		91EBF656211C58BD00F85EB2 /* 增加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "增加.png"; sourceTree = "<group>"; };
+		91EBF657211C58BD00F85EB2 /* 查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查询.png"; sourceTree = "<group>"; };
+		91EBF65C211C59AD00F85EB2 /* pass_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass_img.png; sourceTree = "<group>"; };
+		91EBF65D211C59AD00F85EB2 /* user_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_img.png; sourceTree = "<group>"; };
+		91EBF660211C64B500F85EB2 /* 学生.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学生.png"; sourceTree = "<group>"; };
+		91EBF662211C661100F85EB2 /* 退出登陆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出登陆.png"; sourceTree = "<group>"; };
+		91EBF664211C6D0400F85EB2 /* 登陆.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "登陆.jpg"; sourceTree = "<group>"; };
+		91EBF666211C6F4200F85EB2 /* 注册.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "注册.jpg"; sourceTree = "<group>"; };
+		91EBF668211C70FC00F85EB2 /* 注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册.png"; sourceTree = "<group>"; };
+		91EBF66A211C71FB00F85EB2 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		91EBF66E211C757D00F85EB2 /* 查询背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "查询背景.png"; path = "../../../图片/查询背景.png"; sourceTree = "<group>"; };
+		91EBF670211C78B500F85EB2 /* 添加背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加背景.png"; sourceTree = "<group>"; };
+		91EBF672211C7BEA00F85EB2 /* 删除背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除背景.png"; sourceTree = "<group>"; };
+		91EBF674211C7C5600F85EB2 /* 修改背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "修改背景.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +140,7 @@
 		9131431221193E1E00EA718D = {
 			isa = PBXGroup;
 			children = (
+				91EBF653211C58BD00F85EB2 /* 图片 */,
 				9131431D21193E1E00EA718D /* ios学生管理系统 */,
 				9131433621193E2300EA718D /* ios学生管理系统Tests */,
 				9131434121193E2300EA718D /* ios学生管理系统UITests */,
@@ -137,16 +170,16 @@
 				9131432921193E2300EA718D /* LaunchScreen.storyboard */,
 				9131432C21193E2300EA718D /* Info.plist */,
 				9131432D21193E2300EA718D /* main.m */,
-				9131435321193E4000EA718D /* LoginViewController.h */,
-				9131435421193E4000EA718D /* LoginViewController.m */,
-				9131435621193E7000EA718D /* RegisterViewController.h */,
-				9131435721193E7000EA718D /* RegisterViewController.m */,
-				913143592119919400EA718D /* inquireViewController.h */,
-				9131435A2119919400EA718D /* inquireViewController.m */,
-				9131435C2119960300EA718D /* addViewController.h */,
-				9131435D2119960300EA718D /* addViewController.m */,
 				9131435F2119995900EA718D /* addTableViewCell.h */,
 				913143602119995900EA718D /* addTableViewCell.m */,
+				9131435321193E4000EA718D /* LoginViewController.h */,
+				9131435421193E4000EA718D /* LoginViewController.m */,
+				91EB5B0C211BD05A005DEEB1 /* registerViewController.h */,
+				91EB5B0D211BD05A005DEEB1 /* registerViewController.m */,
+				91EB5B09211BCF7C005DEEB1 /* homePageViewController.h */,
+				91EB5B0A211BCF7C005DEEB1 /* homePageViewController.m */,
+				9131435C2119960300EA718D /* addViewController.h */,
+				9131435D2119960300EA718D /* addViewController.m */,
 				9131436B2119B62D00EA718D /* deleteViewController.h */,
 				9131436C2119B62D00EA718D /* deleteViewController.m */,
 				9131436E2119B63700EA718D /* fixViewController.h */,
@@ -175,6 +208,29 @@
 				9131434421193E2300EA718D /* Info.plist */,
 			);
 			path = "ios学生管理系统UITests";
+			sourceTree = "<group>";
+		};
+		91EBF653211C58BD00F85EB2 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				91EBF672211C7BEA00F85EB2 /* 删除背景.png */,
+				91EBF670211C78B500F85EB2 /* 添加背景.png */,
+				91EBF65C211C59AD00F85EB2 /* pass_img.png */,
+				91EBF65D211C59AD00F85EB2 /* user_img.png */,
+				91EBF654211C58BD00F85EB2 /* 修 改.png */,
+				91EBF655211C58BD00F85EB2 /* 删除筛选项.png */,
+				91EBF656211C58BD00F85EB2 /* 增加.png */,
+				91EBF657211C58BD00F85EB2 /* 查询.png */,
+				91EBF660211C64B500F85EB2 /* 学生.png */,
+				91EBF662211C661100F85EB2 /* 退出登陆.png */,
+				91EBF664211C6D0400F85EB2 /* 登陆.jpg */,
+				91EBF666211C6F4200F85EB2 /* 注册.jpg */,
+				91EBF668211C70FC00F85EB2 /* 注册.png */,
+				91EBF66A211C71FB00F85EB2 /* 首页.png */,
+				91EBF66E211C757D00F85EB2 /* 查询背景.png */,
+				91EBF674211C7C5600F85EB2 /* 修改背景.png */,
+			);
+			path = "图片";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +336,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EBF671211C78B500F85EB2 /* 添加背景.png in Resources */,
+				91EBF667211C6F4200F85EB2 /* 注册.jpg in Resources */,
+				91EBF669211C70FC00F85EB2 /* 注册.png in Resources */,
+				91EBF661211C64B500F85EB2 /* 学生.png in Resources */,
+				91EBF673211C7BEA00F85EB2 /* 删除背景.png in Resources */,
+				91EBF65F211C59AD00F85EB2 /* user_img.png in Resources */,
+				91EBF665211C6D0400F85EB2 /* 登陆.jpg in Resources */,
+				91EBF65B211C58BD00F85EB2 /* 查询.png in Resources */,
+				91EBF659211C58BD00F85EB2 /* 删除筛选项.png in Resources */,
+				91EBF65E211C59AD00F85EB2 /* pass_img.png in Resources */,
+				91EBF65A211C58BD00F85EB2 /* 增加.png in Resources */,
+				91EBF663211C661100F85EB2 /* 退出登陆.png in Resources */,
+				91EBF66B211C71FB00F85EB2 /* 首页.png in Resources */,
 				9131432B21193E2300EA718D /* LaunchScreen.storyboard in Resources */,
+				91EBF658211C58BD00F85EB2 /* 修 改.png in Resources */,
+				91EBF66F211C757D00F85EB2 /* 查询背景.png in Resources */,
 				9131432821193E2300EA718D /* Assets.xcassets in Resources */,
 				9131432621193E1E00EA718D /* Main.storyboard in Resources */,
+				91EBF675211C7C5600F85EB2 /* 修改背景.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,16 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9131436D2119B62D00EA718D /* deleteViewController.m in Sources */,
-				9131435B2119919400EA718D /* inquireViewController.m in Sources */,
 				913143702119B63700EA718D /* fixViewController.m in Sources */,
 				913143612119995900EA718D /* addTableViewCell.m in Sources */,
+				91EB5B0E211BD05A005DEEB1 /* registerViewController.m in Sources */,
 				9131435E2119960300EA718D /* addViewController.m in Sources */,
-				9131435821193E7000EA718D /* RegisterViewController.m in Sources */,
 				9131432321193E1E00EA718D /* ViewController.m in Sources */,
 				9131432E21193E2300EA718D /* main.m in Sources */,
 				913143732119B64100EA718D /* findViewController.m in Sources */,
 				9131432021193E1E00EA718D /* AppDelegate.m in Sources */,
 				9131435521193E4000EA718D /* LoginViewController.m in Sources */,
+				91EB5B0B211BCF7C005DEEB1 /* homePageViewController.m in Sources */,
 				91313AE5211B2C6700D6A5BF /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

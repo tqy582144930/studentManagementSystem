@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "homePageViewController.h"
+
+@protocol fixViewControllerDelegate<NSObject>
+- (void)sendFixArray:(NSMutableArray *) fixMutableArray;
+@end
 
 @interface fixViewController : UIViewController
 <UITableViewDelegate,
@@ -18,6 +23,7 @@ UITableViewDataSource>
 @property (nonatomic, strong) UITextField *ageTextField;
 @property (nonatomic, strong) UITextField *scoreTextField;
 @property (nonatomic, strong) UITextField *fixTextField;
-@property (nonatomic, strong) NSMutableArray *fixStudentMutableArray;
-
+@property (nonatomic, strong) NSMutableArray *sendStudentMutableArray;
+@property (nonatomic, strong) Student *fixStudentMutableArray;
+@property (nonatomic,weak) id <fixViewControllerDelegate> delegate;
 @end
