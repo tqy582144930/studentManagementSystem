@@ -29,7 +29,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor whiteColor];
-    _tableView.alpha = 0.7;
+    _tableView.alpha = 0.5;
     [_tableView registerClass:[addTableViewCell class] forCellReuseIdentifier:@"cell1"];
     [self.view addSubview:_tableView];
     
@@ -45,14 +45,14 @@
     deleteLable.textColor = [UIColor blackColor];
     deleteLable.font = [UIFont systemFontOfSize:20];
     deleteLable.text = @"删除人序号:";
-    deleteLable.alpha = 0.7;
+    deleteLable.alpha = 0.5;
     deleteLable.frame = CGRectMake(10, 620, 110, 30);
     [self.view addSubview:deleteLable];
     
     _deleteTextField = [[UITextField alloc] init];
     _deleteTextField.frame = CGRectMake(125, 620, 270, 30);
     _deleteTextField.placeholder = @"请输入删除学生序号";
-    _deleteTextField.alpha = 0.7;
+    _deleteTextField.alpha = 0.5;
     _deleteTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_deleteTextField];
     
@@ -90,32 +90,32 @@
 
 - (void)pressDelete {
     int i;
-   
+    int flag1 = 1;
+    int flag2 = 1;
+    if ([_deleteTextField.text isEqualToString:@""]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"输入数据不能为空" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
+        [alertController addAction:deleteAction];
+        flag1 = 0;
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
     for (i = 0 ; i < [_sendStudentMutableArray count]; i++) {
         _deleteStudentMutableArray = [_sendStudentMutableArray objectAtIndex:i];
-      if ([_deleteTextField.text isEqualToString:@""]) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"输入数据不能为空" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
+        if ([_deleteStudentMutableArray.numString isEqualToString:_deleteTextField.text] && flag1) {
+            [_sendStudentMutableArray removeObjectAtIndex:i];
+            [_tableView reloadData];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"学生信息删除成功" message:@"请在预览栏查看" preferredStyle: UIAlertControllerStyleAlert];
             UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
             [alertController addAction:deleteAction];
+            flag2 = 0;
+            _deleteTextField.text = @"";
+            [_delegate sendDeleteArray:_sendStudentMutableArray];
+
             [self presentViewController:alertController animated:YES completion:nil];
-          break;
-      }
-      else {
-          if ([_deleteStudentMutableArray.numString isEqualToString:_deleteTextField.text]) {
-              [_sendStudentMutableArray removeObjectAtIndex:i];
-              [_tableView reloadData];
-              UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"学生信息删除成功" message:@"请在预览栏查看" preferredStyle: UIAlertControllerStyleAlert];
-              UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
-              [alertController addAction:deleteAction];
-              _deleteTextField.text = @"";
-              [_delegate sendDeleteArray:_sendStudentMutableArray];
-              
-              [self presentViewController:alertController animated:YES completion:nil];
-              break;
-          }
-      }
+            break;
+        }
     }
-    if (i == [_sendStudentMutableArray count]) {
+    if (i == [_sendStudentMutableArray count] && flag2) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"查无此人" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
         UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
         [alertController addAction:deleteAction];

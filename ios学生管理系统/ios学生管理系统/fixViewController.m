@@ -28,7 +28,7 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/2) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.alpha = 0.7;
+    _tableView.alpha = 0.5;
     _tableView.backgroundColor = [UIColor whiteColor];
     [_tableView registerClass:[addTableViewCell class] forCellReuseIdentifier:@"cell1"];
     [self.view addSubview:_tableView];
@@ -45,7 +45,7 @@
     fixLable.textColor = [UIColor blackColor];
     fixLable.font = [UIFont systemFontOfSize:20];
     fixLable.text = @"修改人序号:";
-    fixLable.alpha = 0.7;
+    fixLable.alpha = 0.5;
     fixLable.frame = CGRectMake(10, 410, 110, 35);
     [self.view addSubview:fixLable];
     
@@ -53,7 +53,7 @@
     nameLable.textColor = [UIColor blackColor];
     nameLable.font = [UIFont systemFontOfSize:20];
     nameLable.text = @"姓名:";
-    nameLable.alpha = 0.7;
+    nameLable.alpha = 0.5;
     nameLable.frame = CGRectMake(10, 455, 50, 35);
     [self.view addSubview:nameLable];
     
@@ -61,7 +61,7 @@
     classLable.textColor = [UIColor blackColor];
     classLable.font = [UIFont systemFontOfSize:20];
     classLable.text = @"班级:";
-    classLable.alpha = 0.7;
+    classLable.alpha = 0.5;
     classLable.frame = CGRectMake(10, 500, 50, 35);
     [self.view addSubview:classLable];
     
@@ -69,7 +69,7 @@
     numLable.textColor = [UIColor blackColor];
     numLable.font = [UIFont systemFontOfSize:20];
     numLable.text = @"序号:";
-    numLable.alpha = 0.7;
+    numLable.alpha = 0.5;
     numLable.frame = CGRectMake(10, 545, 50, 35);
     [self.view addSubview:numLable];
     
@@ -77,7 +77,7 @@
     ageLable.textColor = [UIColor blackColor];
     ageLable.font = [UIFont systemFontOfSize:20];
     ageLable.text = @"年龄:";
-    ageLable.alpha = 0.7;
+    ageLable.alpha = 0.5;
     ageLable.frame = CGRectMake(10, 590, 50, 35);
     [self.view addSubview:ageLable];
     
@@ -85,7 +85,7 @@
     scoreLable.textColor = [UIColor blackColor];
     scoreLable.font = [UIFont systemFontOfSize:20];
     scoreLable.text = @"总成绩:";
-    scoreLable.alpha = 0.7;
+    scoreLable.alpha = 0.5;
     scoreLable.frame = CGRectMake(10, 635, 70, 35);
     [self.view addSubview:scoreLable];
     
@@ -105,42 +105,42 @@
     _fixTextField = [[UITextField alloc] init];
     _fixTextField.frame = CGRectMake(125, 410, 270, 35);
     _fixTextField.placeholder = @"请输入修改学生序号";
-    _fixTextField.alpha = 0.7;
+    _fixTextField.alpha = 0.5;
     _fixTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_fixTextField];
     
     _nameTextField = [[UITextField alloc] init];
     _nameTextField.frame = CGRectMake(65, 455, 330, 35);
     _nameTextField.placeholder = @"请输入姓名";
-    _nameTextField.alpha = 0.7;
+    _nameTextField.alpha = 0.5;
     _nameTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_nameTextField];
     
     _classTextField = [[UITextField alloc] init];
     _classTextField.frame = CGRectMake(65, 500, 330, 35);
     _classTextField.placeholder = @"请输入班级";
-    _classTextField.alpha = 0.7;
+    _classTextField.alpha = 0.5;
     _classTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_classTextField];
     
     _numTextField = [[UITextField alloc] init];
     _numTextField.frame = CGRectMake(65, 545, 330, 35);
     _numTextField.placeholder = @"请输入序号";
-    _numTextField.alpha = 0.7;
+    _numTextField.alpha = 0.5;
     _numTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_numTextField];
     
     _ageTextField = [[UITextField alloc] init];
     _ageTextField.frame = CGRectMake(65, 590, 330, 35);
     _ageTextField.placeholder = @"请输入年龄";
-    _ageTextField.alpha = 0.7;
+    _ageTextField.alpha = 0.5;
     _ageTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_ageTextField];
     
     _scoreTextField = [[UITextField alloc] init];
     _scoreTextField.frame = CGRectMake(80, 635, 315, 35);
     _scoreTextField.placeholder = @"请输入总分";
-    _scoreTextField.alpha = 0.7;
+    _scoreTextField.alpha = 0.5;
     _scoreTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:_scoreTextField];
     
@@ -150,31 +150,38 @@
 
 - (void)pressFix {
     int i;
-    for (i = 0; i < [_sendStudentMutableArray count]; i++) {
-        _fixStudentMutableArray = [_sendStudentMutableArray objectAtIndex:i];
-        if ([_fixTextField.text isEqualToString:@""]) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"修改人序号不能为空" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
-            UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
-            [alertController addAction:deleteAction];
-            [self presentViewController:alertController animated:YES completion:nil];
-            break;
-        }
-        else if ([_fixStudentMutableArray.numString isEqualToString:_fixTextField.text]) {
-            _fixStudentMutableArray.nameString = _nameTextField.text;
-            _fixStudentMutableArray.classString = _classTextField.text;
-            _fixStudentMutableArray.numString = _numTextField.text;
-            _fixStudentMutableArray.ageString = _ageTextField.text;
-            _fixStudentMutableArray.scoreString = _scoreTextField.text;
-            if ([_nameTextField.text isEqualToString:@""] || [_classTextField.text isEqualToString:@""] || [_numTextField.text isEqualToString:@""] || [_ageTextField.text isEqualToString:@""] || [_scoreTextField.text isEqualToString:@""])  {
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"修改信息不能为空" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
-                UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
-                [alertController addAction:deleteAction];
-                [self presentViewController:alertController animated:YES completion:nil];
-                break;
-            } else {
+    int flag = 1;
+    int flag1 = 1;
+    NSScanner *numScanner = [NSScanner scannerWithString:_numTextField.text];
+    NSScanner *ageScanner = [NSScanner scannerWithString:_ageTextField.text];
+    NSScanner *scoreScanner = [NSScanner scannerWithString:_scoreTextField.text];
+    int val;
+    if ((_numTextField.text.length > 3 && ![numScanner scanInt:&val] && ![numScanner isAtEnd]) || (_ageTextField.text.length > 3 && ![ageScanner scanInt:&val] && ![ageScanner isAtEnd]) || (_scoreTextField.text.length > 3 && ![scoreScanner scanInt:&val] && ![scoreScanner isAtEnd])) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"请输入3位以下数字" message:@"" preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
+        flag = 0;
+        [alertController addAction:deleteAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    if ([_nameTextField.text isEqualToString:@""] || [_classTextField.text isEqualToString:@""] || [_numTextField.text isEqualToString:@""] || [_ageTextField.text isEqualToString:@""] || [_scoreTextField.text isEqualToString:@""] || [_fixTextField.text isEqualToString:@""])  {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"信息不能为空" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
+        flag1 = 0;
+        [alertController addAction:deleteAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    if (flag && flag1) {
+        for (i = 0; i < [_sendStudentMutableArray count]; i++) {
+            _fixStudentMutableArray = [_sendStudentMutableArray objectAtIndex:i];
+            if ([_fixStudentMutableArray.numString isEqualToString:_fixTextField.text]) {
+                _fixStudentMutableArray.nameString = _nameTextField.text;
+                _fixStudentMutableArray.classString = _classTextField.text;
+                _fixStudentMutableArray.numString = _numTextField.text;
+                _fixStudentMutableArray.ageString = _ageTextField.text;
+                _fixStudentMutableArray.scoreString = _scoreTextField.text;
+                
                 [_delegate sendFixArray:_sendStudentMutableArray];
                 [_tableView reloadData];
-                
                 _fixTextField.text = @"";
                 _nameTextField.text = @"";
                 _classTextField.text = @"";

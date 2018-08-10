@@ -85,7 +85,7 @@
 		9131435F2119995900EA718D /* addTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addTableViewCell.h; sourceTree = "<group>"; };
 		913143602119995900EA718D /* addTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addTableViewCell.m; sourceTree = "<group>"; };
 		9131436B2119B62D00EA718D /* deleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deleteViewController.h; sourceTree = "<group>"; };
-		9131436C2119B62D00EA718D /* deleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deleteViewController.m; sourceTree = "<group>"; };
+		9131436C2119B62D00EA718D /* deleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = deleteViewController.m; sourceTree = "<group>"; tabWidth = 2; };
 		9131436E2119B63700EA718D /* fixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fixViewController.h; sourceTree = "<group>"; };
 		9131436F2119B63700EA718D /* fixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fixViewController.m; sourceTree = "<group>"; };
 		913143712119B64100EA718D /* findViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = findViewController.h; sourceTree = "<group>"; };

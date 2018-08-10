@@ -88,7 +88,13 @@
             break;
         }
     }
-    if (i == [_personMutableArray count]) {
+    if (_UserTextField.text.length < 8) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"注册账号长度为8位" message:@"请重新输入" preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
+        [alertController addAction:deleteAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    if (i == [_personMutableArray count] && _UserTextField.text.length >= 8) {
         [_delegate sendValue:_UserTextField.text andValue:_PassTextField.text];
         [self dismissViewControllerAnimated:YES completion:nil];
     }

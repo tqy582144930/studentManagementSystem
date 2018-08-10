@@ -143,11 +143,11 @@
             _findNumLabel.text = _findMutableArray.numString;
             _findAgeLabel.text = _findMutableArray.ageString;
             _findScoreLabel.text = _findMutableArray.scoreString;
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"学生信息查询成功" message:@"" preferredStyle: UIAlertControllerStyleAlert];
-            UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
-            [alertController addAction:deleteAction];
-            [self presentViewController:alertController animated:YES completion:nil];
+//            
+//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"学生信息查询成功" message:@"" preferredStyle: UIAlertControllerStyleAlert];
+//            UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:nil];
+//            [alertController addAction:deleteAction];
+//            [self presentViewController:alertController animated:YES completion:nil];
             
             _findTextField.text = @"";
             break;

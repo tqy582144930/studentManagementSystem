@@ -20,7 +20,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.00f green:0.78f blue:0.76f alpha:1.00f];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.88f green:0.88f blue:0.85f alpha:1.00f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:25],
@@ -38,7 +38,7 @@
     
     UIImage *loginImage = [UIImage imageNamed:@"首页"];
     UIImageView *loginImageView = [[UIImageView alloc] initWithImage:loginImage];
-    loginImageView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    loginImageView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64);
     [self.view addSubview:loginImageView];
     
     
